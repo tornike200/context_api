@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import CounterProvider from "./context/counter/CounterProvider.jsx";
+import ThemeProvider from "./context/theme/ThemeProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <CounterProvider>
-        <App />
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
       </CounterProvider>
     </BrowserRouter>
   </StrictMode>,
